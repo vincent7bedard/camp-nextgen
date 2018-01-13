@@ -17,8 +17,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Path pour se rendre aux Template Folder et au Static Folder
 # qui n'est pas dans une application, mais qui est dans le projet
 # en général
-TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
-STATIC_DIR = os.path.join(BASE_DIR, "static")
+#TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+#STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -28,10 +28,12 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '-a*f%iyvhf$^j(t5(+914nlfo$4dn7j648+15am&x)mkkr9cw-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "www.campnextgen.ca",
+    "campnextgen.ca",
+]
 
 
 # Application definition
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'campnextgen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,7 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
@@ -136,7 +138,7 @@ STATIC_URL = '/static/'
 # des static files dans un dossier général qui n'est pas
 # associé à une app en particulier. Ce dossier est dans
 # le projet et non dans une app.
-STATICFILES_DIRS = [STATIC_DIR,]
+#STATICFILES_DIRS = []
 
 
 # Informations pour envoyer les emails
