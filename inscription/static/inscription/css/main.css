@@ -1,0 +1,153 @@
+/************************************** MODIFICATION AUX STYLES DEJA EXISTANTS **************************************/
+/************************************** MODIFICATION AUX STYLES DEJA EXISTANTS **************************************/
+/************************************** MODIFICATION AUX STYLES DEJA EXISTANTS **************************************/
+
+
+/* NAVBAR */
+
+.g-theme-bg-gray-dark-v1-test {
+    background-color: #eee !important;
+}
+
+.g-bg-black-opacity-0_3 {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+  
+.g-bg-black-opacity-0_7 {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+
+.g-bg-cover {
+    position: relative;
+}
+  
+.g-bg-cover::after {
+    content: "";
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.g-bg-black-opacity-0_6--after::after {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Toutes les couleurs principales */
+.g-brd-primary {
+    border-color: #ed1c24 !important;
+}
+
+.g-brd-primary-opp {
+    border-color: #111 !important;
+}
+
+/* Primary Colors */
+.g-color-primary {
+    color: #ed1c24 !important;
+}
+
+.g-brd-primary-fonce {
+    border-color: #ed1c24 !important;
+}
+
+.g-color-primary-fonce {
+    color: #ed1c24 !important;
+}
+
+.g-theme-bg-gray-dark-v1--hover-fonce:hover {
+    background-color: #ed1c24 !important;
+}
+
+.g-theme-brd-gray-dark-v1--hover-fonce:hover {
+    border-color: #ed1c24 !important;
+}
+  
+.g-bg-primary--hover-fonce:hover {
+    background-color: #ed1c24 !important;
+}
+
+/* Primary Colors */
+.g-brd-primary--focus:focus,
+.g-brd-primary--focus.g-state-focus *,
+.g-brd-primary--focus.g-state-focus *:focus {
+    border-color: #ed1c24 !important;
+
+}
+
+.u-btn-primary {
+    color: #fff;
+    background-color: #ed1c24;
+}
+  
+.u-btn-primary:hover, .u-btn-primary.active {
+    border-color: #bd0f15;
+    background-color: #bd0f15;
+}
+  
+.u-btn-primary:hover, .u-btn-primary:focus, .u-btn-primary.active {
+    color: #fff;
+}
+
+.g-bg-secondary {
+    background-color: #fafafa !important;
+}
+
+.g-bg-primary--hover:hover {
+    background-color: #ed1c24 !important;
+}
+
+.u-btn-outline-primary {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+  
+.u-btn-outline-primary:focus, .u-btn-outline-primary.active {
+    color: #fff;
+    border-color: #ed1c24;
+    background-color: #ed1c24;
+}
+  
+.u-btn-outline-primary:hover {
+    color: #fff;
+    border-color: #ed1c24;
+    background-color: #ed1c24;
+}
+
+.u-go-to-v1:hover, .u-go-to-v1:focus:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ed1c24;
+}
+
+
+/************************************** CUSTOM CSS **************************************/
+/************************************** CUSTOM CSS **************************************/
+/************************************** CUSTOM CSS **************************************/
+
+/* html .cng-full-height {
+    height: 1000px;
+    border: 5px solid pink !important;
+    background-color: blueviolet !important;
+}
+
+#cng-bg-video {
+    height: 100%;
+    background-size: cover;
+}
+
+
+
+
+
+.footer {
+    background-color: blue;
+}
+
+
+.football {
+    background: white url("../img/camnewton.jpg") no-repeat center center;
+} */
