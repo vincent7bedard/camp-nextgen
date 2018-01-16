@@ -28,11 +28,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '-a*f%iyvhf$^j(t5(+914nlfo$4dn7j648+15am&x)mkkr9cw-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [
     "www.campnextgen.ca",
     "campnextgen.ca",
+    # Ligne à enlever qui est présente pour le serveur de développement
+    '127.0.0.1',
 ]
 
 

@@ -110,7 +110,7 @@
 
 
     <!-- ***************** QU'EST-CE QUE LE CAMP ***************** -->
-    <section id="lecamp" class="g-py-100">
+    <section id="lecamp" class="g-py-75 g-py-100--md">
         <div class="container">
             <div class="row">
                 <!-- TITRE -->
@@ -230,7 +230,7 @@
                 <div class="col-lg-5 g-min-height-360 g-bg-size-cover g-bg-pos-center" data-bg-img-src="{% static 'inscription/img/img2.jpg' %}"></div>
                 <!-- End Info Image -->
     
-                <div class="col-lg-7 g-bg-gray-dark-v1 g-pt-100 g-pb-80 g-px-80">
+                <div class="col-lg-7 g-bg-gray-dark-v1 g-pt-75 g-pt-100--md g-pb-70 g-pb-80--md g-px-40--sm g-px-80--md">
                     <header class="text-uppercase g-mb-35">
                         <div class="g-mb-30">
                             <span class="d-block g-color-primary g-font-weight-700 g-font-size-default g-mb-15">Notre philosophie</span>
@@ -299,7 +299,7 @@
 
 
     <!-- ***************** INSCRIPTION ***************** -->
-    <section id="inscription" class="g-py-100">
+    <section id="inscription" class="g-py-75 g-py-100--md">
         <div class="container">
             <div class="row">
                 <header class="text-center g-mb-60">
@@ -312,10 +312,11 @@
                         <strong>personnalisés</strong>.
                     </p>
                 </header>
+
                 <div class="row align-items-lg-center">
                     <div class="col-lg-8 col-md-7">
                         <!-- Row -->
-                        <div class="row g-mr-20--md g-mb-30--lg">
+                        <div class="row g-mr-20--md g-mb-30--lg g-px-15 g-px-0--sm">
                             <div class="col-lg-6 g-mb-40">
                                 <i class="d-block icon-transport-026 g-font-size-55 g-line-height-1 g-color-primary g-mb-15"></i>
                                 <h4 class="h5 text-uppercase g-letter-spacing-1 g-mb-10">
@@ -333,7 +334,7 @@
                         <!-- End Row -->
     
                         <!-- Row -->
-                        <div class="row g-mr-20--md">
+                        <div class="row g-mr-20--md g-px-15 g-px-0--sm">
                             <div class="col-lg-6 g-mb-40 g-mb-0--lg">
                                 <i class="d-block icon-hotel-restaurant-211 g-font-size-55 g-line-height-1 g-color-primary g-mb-15"></i>
                                 <h4 class="h5 text-uppercase g-letter-spacing-1 g-mb-10">Entraînement personnalisé</h4>
@@ -351,7 +352,7 @@
     
                     <div class="col-lg-4 ml-md-auto col-md-5">
                         <!-- Article -->
-                        <article class="text-center g-rounded-5 g-brd-around g-brd-gray-light-v5 g-overflow-hidden">
+                        <article class="text-center g-rounded-5 g-brd-around g-brd-gray-light-v5 g-overflow-hidden g-px-15 g-px-0--sm">
                             <!-- Article Header -->
                             <header class="g-bg-gray-light-v5 g-color-black g-pa-40">
                                 <!-- Article Title -->
@@ -387,14 +388,14 @@
 
 
     <!-- ***************** ÉQUIPE ***************** -->
-    <section id="equipe" class="g-theme-bg-gray-dark-v1-test g-py-100">
+    <section id="equipe" class="g-theme-bg-gray-dark-v1-test g-py-75 g-py-100--md">
         <div class="container">
             <div class="row">
-                <header class="text-center g-mb-60">
+                <header class="text-center g-mb-20">
                     <div class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
                         <h2 class="text-uppercase g-line-height-1_4 g-letter-spacing-3 g-font-weight-700 g-font-size-36">Notre équipe</h2>
                     </div>
-                    <p class="lead g-px-200--lg">
+                    <p class="lead g-px-15 g-px-0--sm g-px-200--lg">
                         Lorem ipsum dolor sit amet,
                         <strong>consectetur</strong> adipisicing elit. Ea dignissimos nisi culpa. Saepe obcaecati illo nam laudantium
                         <strong>deserunt</strong> totam dignissimos quam corrupti at, omnis, beatae quidem, molestiae quasi praesentium
@@ -402,99 +403,103 @@
                     </p>
                 </header>
             </div>
-    
-    
-            <!-- Team Block -->
+
             <div class="row">
-                <div class="col-lg-3 col-sm-6 g-mb-30">
+                <!-- Organisateurs Block -->
+                <div class="col-lg-6 text-center">
+                    <h3 class="h3 g-font-weight-700 mb-15 text-center">Organisateurs</h3>
                     <!-- Team Block -->
-                    <figure>
-                        <!-- Figure Image -->
-                        <img class="w-100" src="http://bayobserver.ca/wp-content/uploads/2013/08/carney1-400x450.jpg" alt="Image Description">
-                        <!-- End Figure Image-->
-    
-                        <!-- Figure Info -->
-                        <div class="text-center g-bg-white g-pa-25">
-                            <div class="g-mb-15">
-                                <h4 class="h5 g-color-black g-mb-5">Maria Olsson</h4>
-                                <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Technical Director</em>
-                            </div>
-                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-    
-                            <hr class="g-brd-gray-light-v4 my-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 g-mb-30">
+                            <!-- Team Block -->
+                            <figure>
+                                <!-- Figure Image -->
+                                <img class="w-100" src="{% static 'inscription/img/js400x450.jpg' %}" alt="Jean-Simon Roy">
+                                <!-- End Figure Image-->
+            
+                                <!-- Figure Info -->
+                                <div class="text-center g-bg-white g-pa-25">
+                                    <div class="g-mb-15">
+                                        <h4 class="h5 g-color-black g-mb-5">Jean-Simon Roy</h4>
+                                        <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Organisateur et Entraîneur</em>
+                                    </div>
+                                    <p>Joueur de football pour les Eskimos d'Edmonton dans la CFL.</p>
+                                </div>
+                                <!-- End Figure Info-->
+                            </figure>
+                            <!-- End Figure -->
                         </div>
-                        <!-- End Figure Info-->
-                    </figure>
-                    <!-- End Figure -->
-                </div>
-    
-                <div class="col-lg-3 col-sm-6 g-mb-30">
-                    <!-- Team Block -->
-                    <figure>
-                        <!-- Figure Image -->
-                        <img class="w-100" src="https://www.xtrf.eu/wp-content/uploads/2016/02/meetus_OskarMalina-400x450.jpg" alt="Image Description">
-                        <!-- End Figure Image-->
-    
-                        <!-- Figure Info -->
-                        <div class="text-center g-bg-white g-pa-25">
-                            <div class="g-mb-15">
-                                <h4 class="h5 g-color-black g-mb-5">Tina Krueger</h4>
-                                <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Lead Designer</em>
-                            </div>
-                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-    
-                            <hr class="g-brd-gray-light-v4 my-4">
+            
+                        <div class="col-lg-6 col-sm-6 g-mb-30">
+                            <!-- Team Block -->
+                            <figure>
+                                <!-- Figure Image -->
+                                <img class="w-100" src="{% static 'inscription/img/sam400x450.jpg' %}" alt="Samuel Lefebvre">
+                                <!-- End Figure Image-->
+            
+                                <!-- Figure Info -->
+                                <div class="text-center g-bg-white g-pa-25">
+                                    <div class="g-mb-15">
+                                        <h4 class="h5 g-color-black g-mb-5">Samuel Lefebvre</h4>
+                                        <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Organisateur et Entraîneur</em>
+                                    </div>
+                                    <p>Joueur de football pour le Rouge et Or de l'Université Laval.</p>
+                                </div>
+                                <!-- End Figure Info-->
+                            </figure>
+                            <!-- End Figure -->
                         </div>
-                        <!-- End Figure Info-->
-                    </figure>
-                    <!-- End Figure -->
+                    </div>
                 </div>
-    
-                <div class="col-lg-3 col-sm-6 g-mb-30">
-                    <!-- Team Block -->
-                    <figure>
-                        <!-- Figure Image -->
-                        <img class="w-100" src="http://bayobserver.ca/wp-content/uploads/2013/08/carney1-400x450.jpg" alt="Image Description">
-                        <!-- End Figure Image-->
-    
-                        <!-- Figure Info -->
-                        <div class="text-center g-bg-white g-pa-25">
-                            <div class="g-mb-15">
-                                <h4 class="h5 g-color-black g-mb-5">David Case</h4>
-                                <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Web Developer</em>
+                <!-- Fin organisateurs Block -->
+
+                <!-- Entraîneurs Block -->
+                <div class="col-lg-6">
+                    <h3 class="h3 g-font-weight-700 mb-15 text-center">Entraîneurs</h3>
+                    <div class="row g-mx-minus-25 g-mb-0">
+                        <div class="col-6 col-lg-6 g-px-25 g-mb-50">
+                            <!-- Team -->
+                            <div class="text-center">
+                                <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="http://via.placeholder.com/200x200" alt="Image Description">
+                                <h4 class="h5 g-font-weight-600 mb-1">Alex Taylor</h4>
+                                <span class="d-block g-color-primary">Entraîneur</span>
                             </div>
-                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-    
-                            <hr class="g-brd-gray-light-v4 my-4">
+                            <!-- End Team -->
                         </div>
-                        <!-- End Figure Info-->
-                    </figure>
-                    <!-- End Figure -->
-                </div>
-    
-                <div class="col-lg-3 col-sm-6 g-mb-30">
-                    <!-- Team Block -->
-                    <figure>
-                        <!-- Figure Image -->
-                        <img class="w-100" src="https://www.xtrf.eu/wp-content/uploads/2016/02/meetus_OskarMalina-400x450.jpg" alt="Image Description">
-                        <!-- End Figure Image-->
-    
-                        <!-- Figure Info -->
-                        <div class="text-center g-bg-white g-pa-25">
-                            <div class="g-mb-15">
-                                <h4 class="h5 g-color-black g-mb-5">Sara Lisbon</h4>
-                                <em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Support Manager</em>
+                    
+                        <div class="col-6 col-lg-6 g-px-25 g-mb-50">
+                            <!-- Team -->
+                            <div class="text-center">
+                                <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="http://via.placeholder.com/200x200" alt="Image Description">
+                                <h4 class="h5 g-font-weight-600 mb-1">Kate Metu</h4>
+                                <span class="d-block g-color-primary">Entraîneur</span>
                             </div>
-                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-    
-                            <hr class="g-brd-gray-light-v4 my-4">
+                            <!-- End Team -->
                         </div>
-                        <!-- End Figure Info-->
-                    </figure>
-                    <!-- End Figure -->
+                    
+                        <div class="col-6 col-lg-6 g-px-25 g-mb-50">
+                            <!-- Team -->
+                            <div class="text-center">
+                                <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="http://via.placeholder.com/200x200" alt="Image Description">
+                                <h4 class="h5 g-font-weight-600 mb-1">Daniel Wearne</h4>
+                                <span class="d-block g-color-primary">Entraîneur</span>
+                            </div>
+                            <!-- End Team -->
+                        </div>
+                    
+                        <div class="col-6 col-lg-6 g-px-25 g-mb-50">
+                            <!-- Team -->
+                            <div class="text-center">
+                                <img class="u-shadow-v29 g-width-110 g-height-110 rounded-circle mb-5" src="http://via.placeholder.com/200x200" alt="Image Description">
+                                <h4 class="h5 g-font-weight-600 mb-1">Tina Krueger</h4>
+                                <span class="d-block g-color-primary">Entraîneur</span>
+                            </div>
+                            <!-- End Team -->
+                        </div>
+                    </div>
                 </div>
+                <!-- Fin Entraîneurs Block -->
             </div>
-            <!-- End Team Block -->
         </div>
     </section>
     <!-- ***************** FIN ÉQUIPE ***************** -->
@@ -507,7 +512,7 @@
                 <div class="g-overflow-hidden">
                     <div class="row text-center mx-0 g-ml-minus-1 g-mb-minus-1">
     
-                        <div class="col-md-3 offset-3 px-0">
+                        <div class="col-md-3 offset-md-3 px-0">
                             <div class="g-brd-left g-brd-bottom g-brd-white-opacity-0_2 g-py-40">
                                 <img class="img-fluid g-width-120 g-opacity-0_6 g-opacity-1--hover g-transition-0_2" src="{% static 'inscription/img/logo-xpn.png' %}"
                                     alt="XPN logo">
@@ -532,7 +537,7 @@
     <!-- ***************** FOOTER ***************** -->
     <footer id="contact" class="g-pos-rel">
         <!-- ***************** CONTACT ***************** -->
-        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-120 g-pb-70" style="background-image: url({% static 'inscription/img/img5.jpg' %});">
+        <div class="g-bg-size-cover g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-pt-75 g-pt-100--md g-pb-40 g-pb-60--md" style="background-image: url({% static 'inscription/img/img5.jpg' %});">
             <div class="container u-bg-overlay__inner">
                 <div class="row align-items-center">
                     <div class="col-md-4 g-mb-50">
@@ -589,20 +594,14 @@
                             </li>
                             <li class="list-inline-item g-mx-2">
                                 <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover-fonce g-font-size-13 rounded-circle"
-                                    href="#">
-                                    <i class="fa fa-twitter"></i>
+                                    href="https://www.instagram.com/campnextgen/">
+                                    <i class="fa fa-instagram"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item g-mx-2">
                                 <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover-fonce g-font-size-13 rounded-circle"
-                                    href="#">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item g-mx-2">
-                                <a class="u-icon-v1 u-icon-size--sm g-color-white g-bg-white-opacity-0_1 g-bg-primary--hover-fonce g-font-size-13 rounded-circle"
-                                    href="#">
-                                    <i class="fa fa-dribbble"></i>
+                                    href="https://www.youtube.com/channel/UC_BTI08WxjW2ZRPdczAWteg">
+                                    <i class="fa fa-youtube-play"></i>
                                 </a>
                             </li>
                         </ul>
@@ -610,7 +609,7 @@
                     </div>
 
                     <div class="col-md-8 g-mb-50">
-                        <div class="g-brd-around g-brd-white-opacity-0_6 g-px-45 g-py-60">
+                        <div class="g-brd-around g-brd-white-opacity-0_6 g-px-25 g-px-45--md g-py-60">
                             <div class="row">
                                 <div class="col-md-4 g-mb-30">
                                     <h2 class="h1 g-color-white">Envoyez-Nous Un Message</h2>

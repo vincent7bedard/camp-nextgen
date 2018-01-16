@@ -1,10 +1,161 @@
-{% extends "inscription/base.html" %}
+{% extends "inscription/light_page_base.html" %}
+
+{% load static %}
 
 {% block title_block %}
     Inscription - Camp NextGen
 {% endblock title_block %}
 
 
-{% block body_block %}
-    <h1>INSCRIPTION YOO</h1>
-{% endblock body_block %}
+{% block content_block %}
+    <!-- Hero Info #05 -->
+    <section class="g-py-200--md g-py-80">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-10 ml-md-auto mr-md-auto">
+                    <h3 class="h5 text-uppercase g-font-weight-700 g-mb-20">Camp NextGen</h3>
+                    <h2 class="display-4 text-uppercase g-font-weight-600 g-mb-20">
+                        <span class="g-color-primary">Complétez</span>
+                        Le formulaire
+                    </h2>
+    
+                    <p class="lead g-mb-40">Complétez le formulaire pour finaliser votre inscription.</p>
+                </div>
+            </div>
+    
+            <!-- FORM DÉBUT -->
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="row">
+                    <div class="col-md-6 g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30">
+                        <!-- PRENOM Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_prenom">Prénom</label>
+                            {{ form.enfant_prenom }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_prenom.errors }}</small>
+                        </div>
+                        <!-- End PRENOM Input -->
+                        <!-- NOM Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_nom">Nom</label>
+                            {{ form.enfant_nom }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_nom.errors }}</small>
+                        </div>
+                        <!-- End NOM Input -->
+                        <!-- EMAIL Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_email">Email</label>
+                            {{ form.enfant_email }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_email.errors }}</small>
+                        </div>
+                        <!-- End EMAIL Input -->
+                        <!-- TELEPHONE Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_numero_telephone">Numéro de téléphone</label>
+                            {{ form.numero_telephone }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.numero_telephone.errors }}</small>
+                        </div>
+                        <!-- End TELEPHONE Input -->
+                        <!-- POSITION Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_position">Position</label>
+                            {{ form.enfant_position }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_position.errors }}</small>
+                        </div>
+                        <!-- End POSITION Input -->
+                    </div>
+            
+                    <div class="col-md-6 g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30">
+                        <!-- ÉCOLE Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_ecole">École</label>
+                            {{ form.enfant_ecole }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_ecole.errors }}</small>
+                        </div>
+                        <!-- End ÉCOLE Input -->
+                        <!-- AGE Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_age">Âge</label>
+                            {{ form.enfant_age }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_age.errors }}</small>
+                        </div>
+                        <!-- End AGE Input -->
+                        <!-- PRENOM PARENT Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_parent_prenom">Prénom Parent</label>
+                            {{ form.parent_prenom }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.parent_prenom.errors }}</small>
+                        </div>
+                        <!-- End PRENOM PARENT Input -->
+                        <!-- NOM PARENT Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_parent_nom">Nom Parent</label>
+                            {{ form.parent_nom }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.parent_nom.errors }}</small>
+                        </div>
+                        <!-- End NOM PARENT Input -->
+                        <!-- GRANDEUR GILET Input -->
+                        <div class="form-group g-mb-20">
+                            <label class="g-mb-10" for="id_enfant_grandeur_tshirt">Grandeur t-shirt</label>
+                            {{ form.enfant_grandeur_tshirt }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.enfant_grandeur_tshirt.errors }}</small>
+                        </div>
+                        <!-- End GRANDEUR GILET Input -->
+                    </div>
+                </div>
+            
+                <div class="row text-center">
+                    <div class="col-md-10 ml-md-auto mr-md-auto">
+                        <!-- DÉCHARGE -->
+                        <div class="form-check">
+                            <label class="form-check-label g-mb-20">
+                                {{ form.decharge }}
+                                En cochant cette case, je confirme avoir lu la <a class="u-link-v5 g-color-primary" href="{% url 'inscription:inscription_decharge' %}" target="_blank">décharge de responsabilité</a> et je comprend, à titre de parent ou tuteur légal du participant, que cela constitue une signature électronique.
+                            </label>
+                            <p>{{ form.decharge.errors }}</p>
+                        </div>
+                        <!-- FIN DÉCHARGE -->
+                        <button class="btn u-btn-primary g-font-weight-600 g-font-size-16 g-py-15 g-px-35 rounded-0"
+                        type="submit" role="button">Envoyer</button>
+                    </div>
+                </div>
+            
+            </form>
+        </div>
+    </section>
+    <!-- Hero Info #05 -->
+    <br>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="68HCLCKM2QENY">
+        <table>
+            <tr>
+                <td>
+                    <input type="hidden" name="on0" value="Emplacement du camp">Emplacement du camp</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="os0">
+                        <option value="14-15 avril, Stade Leclerc CNDF, Québec">14-15 avril, Stade Leclerc CNDF, Québec $199.99 CAD</option>
+                        <option value="12-13 mai, Stade Juvénat Notre-Dame, Lévis">12-13 mai, Stade Juvénat Notre-Dame, Lévis $199.99 CAD</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="currency_code" value="CAD">
+        <input type="image" src="https://www.paypalobjects.com/fr_CA/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+        <img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
+    </form>
+{% endblock content_block %}
