@@ -30,7 +30,7 @@ def index(request):
 
             email_subject = "Contact - Camp NextGen"
             # Il faut mettre le compte Gmail de CampNextGen ici
-            adresse_email_campnextgen = "vincent.bedard.9@ulaval.ca"
+            adresse_email_campnextgen = "campfootballnextgen@gmail.com"
             email_message = email_content + "\n\nDe " + contact_name + "\n" + contact_email
 
             # Envoie un email de la part du client (Si Gmail le permet) vers Camp NextGen.
@@ -77,7 +77,7 @@ def inscription(request):
             email_subject = "Inscription - Camp NextGen"
             adresse_email_client = enfant_email
             # Il faut mettre le compte Gmail de CampNextGen ici
-            adresse_email_campnextgen = "vincent.bedard.9@ulaval.ca"
+            adresse_email_campnextgen = "campfootballnextgen@gmail.com"
             
             email_message = "Email: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\nNom parent: {} {}\n\nNom enfant: {} {}\nÉcole enfant: {}\nÂge enfant: {} ans\nPosition enfant: {}\nGrandeur de T-shirt enfant: {}\n\n\n\nMerci de votre inscription.\n\nL'équipe du Camp NextGen".format(enfant_email, numero_telephone, decharge, parent_prenom, parent_nom, enfant_prenom, enfant_nom, enfant_ecole, enfant_age, enfant_position, enfant_grandeur_tshirt)
 
