@@ -31,7 +31,7 @@ def index(request):
             email_subject = "Contact - Camp NextGen"
             # Il faut mettre le compte Gmail de CampNextGen ici
             adresse_email_campnextgen = "campfootballnextgen@gmail.com"
-            email_message = email_content + "\n\nDe " + contact_name + "\n" + contact_email
+            email_message = "{}\n\n------------------------\nDe: {}\nEmail: {}".format(email_content, contact_name, contact_email)
 
             # Envoie un email de la part du client (Si Gmail le permet) vers Camp NextGen.
             send_mail(email_subject, email_message, contact_email, [adresse_email_campnextgen])
@@ -73,23 +73,43 @@ def inscription(request):
             enfant_grandeur_tshirt = form.cleaned_data["enfant_grandeur_tshirt"]
             numero_telephone = form.cleaned_data["numero_telephone"]
             decharge = form.cleaned_data["decharge"]
+            commentaires = form.cleaned_data["commentaires"]
 
+            if commentaires == "":
+                commentaires = "AUCUN"
+            
             email_subject = "Inscription - Camp NextGen"
             adresse_email_client = enfant_email
             # Il faut mettre le compte Gmail de CampNextGen ici
             adresse_email_campnextgen = "campfootballnextgen@gmail.com"
             
-            email_message = "Email: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\nNom parent: {} {}\n\nNom enfant: {} {}\nÉcole enfant: {}\nÂge enfant: {} ans\nPosition enfant: {}\nGrandeur de T-shirt enfant: {}\n\n\n\nMerci de votre inscription.\n\nL'équipe du Camp NextGen".format(enfant_email, numero_telephone, decharge, parent_prenom, parent_nom, enfant_prenom, enfant_nom, enfant_ecole, enfant_age, enfant_position, enfant_grandeur_tshirt)
+            email_message = "Nom du participant: {} {}\nNom du parent: {} {}\n\nEmail: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\n\nÉcole du participant: {}\nÂge du participant: {} ans\nPosition de football: {}\nGrandeur de T-shirt: {}\n\nCommentaires: {}".format(enfant_prenom, enfant_nom, parent_prenom, parent_nom, enfant_email, numero_telephone, decharge, enfant_ecole, enfant_age, enfant_position, enfant_grandeur_tshirt, commentaires)
 
             # Envoie un email de la part de Camp NextGen vers Camp NextGen et vers le client pour que les gars sachent qui est inscrit et pour que le client recoivent une corfirmation..
-            send_mail(email_subject, email_message, adresse_email_campnextgen, [adresse_email_client, adresse_email_campnextgen])
+            send_mail(email_subject, email_message, adresse_email_campnextgen, [adresse_email_campnextgen])
 
             
             # redirect to a new URL:
-            return redirect(reverse("inscription:inscription_merci")) #est-ce qu'on doit mettre les guillemets ou non dans reverse() ?
+            return redirect(reverse("inscription:inscription_paiement"))
 
     context = {"form": form}
     return render(request, "inscription/inscription.html", context)
+
+
+# name="inscription_attente"
+class InscriptionAttenteView(TemplateView):
+    """
+    Attente du début des inscriptions
+    """
+    template_name = "inscription/inscription_attente.html"
+
+
+# name="inscription_annulation"
+class InscriptionAnnulationView(TemplateView):
+    """
+    Annulation de l'inscription
+    """
+    template_name = "inscription/inscription_annulation.html"
 
 
 # name="inscription_decharge"
@@ -98,6 +118,14 @@ class InscriptionDechargeView(TemplateView):
     Lecture de la décharge
     """
     template_name = "inscription/inscription_decharge.html"
+
+
+# name="inscription_paiement"
+class InscriptionPaiementView(TemplateView):
+    """
+    Page de Paiement
+    """
+    template_name = "inscription/inscription_paiement.html"
 
 
 # name="contact_merci"

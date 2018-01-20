@@ -1,0 +1,62 @@
+{% extends "inscription/light_page_base.html" %}
+
+{% load static %}
+
+{% block title_block %}
+    Inscription - Camp NextGen
+{% endblock title_block %}
+
+{% block content_block %}
+    <!-- Hero Info #05 -->
+    <section class="g-py-200--md g-py-80">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-10 ml-md-auto mr-md-auto">
+                    <h3 class="h5 text-uppercase g-font-weight-700 g-mb-20">Étape 2</h3>
+                    <h2 class="display-4 text-uppercase g-font-weight-600 g-mb-20">
+                        <span class="g-color-primary">Effectuez</span>
+                        Le paiement
+                    </h2>
+    
+                    <p class="lead g-mb-20">Effectuez le paiement pour finaliser votre inscription.</p>
+                  
+                </div>
+            </div>
+
+
+            <div class="row text-center justify-content-center">
+                <div class="col-md-8">
+                    <img class="g-mb-20 img-fluid" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Credit Card Badges">
+                    <!-- Bouton Paypal -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="BPKCMJPMWK334">
+
+                        <input type="hidden" name="on0" value="Options d'inscription">Options d'inscription</td>
+
+                        <select name="os0" class="form-control rounded-0 g-mb-15">
+                            <option value="Option de Base, 14-15 avril, Stade Leclerc">Option de Base, 14-15 avril, Stade Leclerc $0.01 CAD</option>
+                            <option value="Option Plus, 14-15 avril, Stade Leclerc">Option Plus, 14-15 avril, Stade Leclerc $0.05 CAD</option>
+                            <option value="Option de Base, 12-13 mai, Juvenat Notre-Dame">Option de Base, 12-13 mai, Juvenat Notre-Dame $0.01 CAD</option>
+                            <option value="Option Plus, 12-13 mai, Juvenat Notre-Dame">Option Plus, 12-13 mai, Juvenat Notre-Dame $0.05 CAD</option>
+                        </select>
+
+                        <input type="hidden" name="on1" value="Nom Complet du Participant">Prénom et Nom du Participant</td>
+
+                        <input type="text" name="os1" maxlength="62" class="form-control form-control-md rounded-0 g-mb-20" placeholder="Prénom et Nom du participant" required>
+
+
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="image" src="https://www.paypalobjects.com/fr_CA/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                    <!-- Fin Bouton Paypal -->
+
+                </div>
+            </div>
+
+  
+        </div>
+    </section>
+    <!-- Hero Info #05 -->
+{% endblock content_block %}

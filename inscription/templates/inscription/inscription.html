@@ -13,13 +13,13 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-10 ml-md-auto mr-md-auto">
-                    <h3 class="h5 text-uppercase g-font-weight-700 g-mb-20">Camp NextGen</h3>
+                    <h3 class="h5 text-uppercase g-font-weight-700 g-mb-20">Étape 1</h3>
                     <h2 class="display-4 text-uppercase g-font-weight-600 g-mb-20">
                         <span class="g-color-primary">Complétez</span>
                         Le formulaire
                     </h2>
     
-                    <p class="lead g-mb-40">Complétez le formulaire pour finaliser votre inscription.</p>
+                    <p class="lead g-mb-40">Complétez le formulaire avant de procéder au paiement.</p>
                 </div>
             </div>
     
@@ -106,6 +106,19 @@
                 </div>
             
                 <div class="row text-center">
+                    <div class="col-md-8 ml-md-auto mr-md-auto">
+                        <!-- COMMENTAIRES Input -->
+                        <div class="form-group g-mb-25">
+                            <label for="id_commentaires">Commentaires, Allergies, etc. (optionnel)</label>
+                            {{ form.commentaires }}
+                            <small class="form-text text-muted g-font-size-default g-mt-10">{{ form.commentaires.errors }}</small>
+                        </div>
+                        <!-- End COMMENTAIRES Input -->
+                    </div>
+                </div>
+
+
+                <div class="row text-center">
                     <div class="col-md-10 ml-md-auto mr-md-auto">
                         <!-- DÉCHARGE -->
                         <div class="form-check">
@@ -125,37 +138,4 @@
         </div>
     </section>
     <!-- Hero Info #05 -->
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="68HCLCKM2QENY">
-        <table>
-            <tr>
-                <td>
-                    <input type="hidden" name="on0" value="Emplacement du camp">Emplacement du camp</td>
-            </tr>
-            <tr>
-                <td>
-                    <select name="os0">
-                        <option value="14-15 avril, Stade Leclerc CNDF, Québec">14-15 avril, Stade Leclerc CNDF, Québec $199.99 CAD</option>
-                        <option value="12-13 mai, Stade Juvénat Notre-Dame, Lévis">12-13 mai, Stade Juvénat Notre-Dame, Lévis $199.99 CAD</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <input type="hidden" name="currency_code" value="CAD">
-        <input type="image" src="https://www.paypalobjects.com/fr_CA/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-        <img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
-    </form>
 {% endblock content_block %}

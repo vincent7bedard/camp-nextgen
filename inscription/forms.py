@@ -93,3 +93,7 @@ class InscriptionForm(forms.Form):
         required=True,
         widget=forms.CheckboxInput(attrs={"class":"form-check-input mr-1",})
     )
+    commentaires = forms.CharField(
+        required=False,
+        widget=forms.Textarea(attrs={"class":"form-control rounded-0 form-control-md","rows":"3", "placeholder":"Commentaires, Allergies, etc."}),
+    )

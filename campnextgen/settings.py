@@ -34,7 +34,6 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 ALLOWED_HOSTS = [
     "www.campnextgen.ca",
     "campnextgen.ca",
-    # Ligne à enlever qui est présente pour le serveur de développement
     '127.0.0.1',
 ]
 
@@ -150,5 +149,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'campfootballnextgen@gmail.com'
-EMAIL_HOST_PASSWORD = 'samjs@01'
+# en développement, mettre dans EMAIL_HOST_PASSWORD le vrai mot de passe du compte Gmail
+EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD', 'testtest')
 EMAIL_USE_TLS = True
