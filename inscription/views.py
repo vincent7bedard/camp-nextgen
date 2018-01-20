@@ -68,7 +68,8 @@ def inscription(request):
             enfant_nom = form.cleaned_data["enfant_nom"]
             enfant_ecole = form.cleaned_data["enfant_ecole"]
             enfant_email = form.cleaned_data["enfant_email"]
-            enfant_age = form.cleaned_data["enfant_age"]
+            #enfant_age = form.cleaned_data["enfant_age"]
+            enfant_niveau_secondaire = form.cleaned_data["enfant_niveau_secondaire"]
             enfant_position = form.cleaned_data["enfant_position"]
             enfant_grandeur_tshirt = form.cleaned_data["enfant_grandeur_tshirt"]
             numero_telephone = form.cleaned_data["numero_telephone"]
@@ -83,7 +84,7 @@ def inscription(request):
             # Il faut mettre le compte Gmail de CampNextGen ici
             adresse_email_campnextgen = "campfootballnextgen@gmail.com"
             
-            email_message = "Nom du participant: {} {}\nNom du parent: {} {}\n\nEmail: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\n\nÉcole du participant: {}\nÂge du participant: {} ans\nPosition de football: {}\nGrandeur de T-shirt: {}\n\nCommentaires: {}".format(enfant_prenom, enfant_nom, parent_prenom, parent_nom, enfant_email, numero_telephone, decharge, enfant_ecole, enfant_age, enfant_position, enfant_grandeur_tshirt, commentaires)
+            email_message = "Nom du participant: {} {}\nNom du parent: {} {}\n\nEmail: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\n\nÉcole du participant: {}\nNiveau secondaire: Secondaire {} ans\nPosition de football: {}\nGrandeur de T-shirt: {}\n\nCommentaires: {}".format(enfant_prenom, enfant_nom, parent_prenom, parent_nom, enfant_email, numero_telephone, decharge, enfant_ecole, enfant_niveau_secondaire, enfant_position, enfant_grandeur_tshirt, commentaires)
 
             # Envoie un email de la part de Camp NextGen vers Camp NextGen et vers le client pour que les gars sachent qui est inscrit et pour que le client recoivent une corfirmation..
             send_mail(email_subject, email_message, adresse_email_campnextgen, [adresse_email_campnextgen])

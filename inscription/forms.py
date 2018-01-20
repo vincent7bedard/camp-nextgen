@@ -37,6 +37,15 @@ GRANDEUR_TSHIRT_CHOIX = (
     ("xxxl", "XXXL"),
 )
 
+NIVEAU_SECONDAIRE = (
+    ("1", "1"),
+    ("2", "2"),
+    ("3", "3"),
+    ("4", "4"),
+    ("5", "5"),
+)
+
+
 class InscriptionForm(forms.Form):
     parent_prenom = forms.CharField(
         required=True,
@@ -67,11 +76,16 @@ class InscriptionForm(forms.Form):
         required=True,
         widget=forms.EmailInput(attrs={"class":"form-control form-control-md rounded-0", "placeholder":"Email"}),
     )
-    enfant_age = forms.IntegerField(
+    #enfant_age = forms.IntegerField(
+    #    required=True,
+    #    min_value=12,
+    #    max_value=22,
+    #    widget=forms.NumberInput(attrs={"class":"form-control form-control-md rounded-0", "placeholder":"Âge"})
+    #)
+    enfant_niveau_secondaire = forms.ChoiceField(
         required=True,
-        min_value=12,
-        max_value=22,
-        widget=forms.NumberInput(attrs={"class":"form-control form-control-md rounded-0", "placeholder":"Âge"})
+        choices=NIVEAU_SECONDAIRE,
+        widget=forms.Select(attrs={"class":"form-control rounded-0",})
     )
     enfant_position = forms.ChoiceField(
         required=True,
