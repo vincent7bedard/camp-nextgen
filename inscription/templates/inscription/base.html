@@ -17,10 +17,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="Le camp de football NextGen est un camp dédié aux jeunes du Québec visant leur développement sur les plans technique et tactique du football. De plus, le camp les initie aux techniques d'épreuves physiques des camps d'évaluation ainsi qu'au suivi d'un bon programme d'entraînement.">
 
+    {% load static %}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.campnextgen.ca/" />
+    <meta property="og:title" content="Camp NextGen" />
+    <meta property="og:image" content="{% static 'inscription/img/campnextgen2.png' %}" />
+    <meta property="og:description" content="Le camp de football NextGen est un camp dédié aux jeunes du Québec visant leur développement sur les plans technique et tactique du football. De plus, le camp les initie aux techniques d'épreuves physiques des camps d'évaluation ainsi qu'au suivi d'un bon programme d'entraînement.">
+
     <!-- Title -->
     <title>{% block title_block %}Camp NextGen{% endblock title_block %}</title>
-
-    {% load static %}
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'inscription/favicons/apple-touch-icon.png' %}">
