@@ -35,7 +35,7 @@ def index(request):
 
             # Envoie un email de la part du client (Si Gmail le permet) vers Camp NextGen.
             send_mail(email_subject, email_message, contact_email, [adresse_email_campnextgen])
-            
+
             # redirect to a new URL:
             return redirect(reverse("inscription:contact_merci"))
 
@@ -78,18 +78,18 @@ def inscription(request):
 
             if commentaires == "":
                 commentaires = "AUCUN"
-            
+
             email_subject = "Inscription - Camp NextGen"
             adresse_email_client = enfant_email
             # Il faut mettre le compte Gmail de CampNextGen ici
             adresse_email_campnextgen = "campfootballnextgen@gmail.com"
-            
-            email_message = "Nom du participant: {} {}\nNom du parent: {} {}\n\nEmail: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\n\nÉcole du participant: {}\nNiveau secondaire: Secondaire {} ans\nPosition de football: {}\nGrandeur de T-shirt: {}\n\nCommentaires: {}".format(enfant_prenom, enfant_nom, parent_prenom, parent_nom, enfant_email, numero_telephone, decharge, enfant_ecole, enfant_niveau_secondaire, enfant_position, enfant_grandeur_tshirt, commentaires)
+
+            email_message = "Nom du participant: {} {}\nNom du parent: {} {}\n\nEmail: {}\nNuméro de téléphone: {}\nA accepté la décharge: {}\n\nÉcole du participant: {}\nNiveau secondaire: Secondaire {}\nPosition de football: {}\nGrandeur de T-shirt: {}\n\nCommentaires: {}".format(enfant_prenom, enfant_nom, parent_prenom, parent_nom, enfant_email, numero_telephone, decharge, enfant_ecole, enfant_niveau_secondaire, enfant_position, enfant_grandeur_tshirt, commentaires)
 
             # Envoie un email de la part de Camp NextGen vers Camp NextGen et vers le client pour que les gars sachent qui est inscrit et pour que le client recoivent une corfirmation..
             send_mail(email_subject, email_message, adresse_email_campnextgen, [adresse_email_campnextgen])
 
-            
+
             # redirect to a new URL:
             return redirect(reverse("inscription:inscription_paiement"))
 
