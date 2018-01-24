@@ -11,4 +11,7 @@ urlpatterns = [
     url(r'^inscription/decharge$', views.InscriptionDechargeView.as_view(), name="inscription_decharge"),
     url(r'^inscription/paiement$', views.InscriptionPaiementView.as_view(), name="inscription_paiement"),
     url(r'^inscription/merci$', views.InscriptionMerciView.as_view(), name="inscription_merci"),
+    #pour la verification de Google Search Console (webmaster tools)
+    url(r'^google64b73e3e98e79ca8.html$', views.GoogleSearchConsoleView.as_view(), name="google_verification"),
+
 ]

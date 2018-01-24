@@ -143,3 +143,11 @@ class InscriptionMerciView(TemplateView):
     Après une inscription avec succès
     """
     template_name = "inscription/inscription_merci.html"
+
+
+# name="google_verification"
+class GoogleSearchConsoleView(TemplateView):
+    """
+    Pour vérifier si je possède bien le site web avec la Google Search Console
+    """
+    template_name = "inscription/google_verification.html"
